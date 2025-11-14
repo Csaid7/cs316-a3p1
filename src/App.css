@@ -1,42 +1,99 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Dark theme - Overall page styling */
+body {
+  background: #1a1a2e;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee;
+}
+
+/* Current conditions box - dark theme */
+.current-conditions {
+  background: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.current-conditions h2 {
+  color: #4ecca3;
+  margin-top: 0;
+}
+
+.current-conditions p {
+  color: #e8e8e8;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Forecast container - holds all day tiles */
+.forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Individual day tile card - dark theme */
+.day-tile {
+  background: #16213e;
+  border: 2px solid #0f3460;
+  width: calc((100% - 100px) / 5);
+  min-width: 180px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.day-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(78, 204, 163, 0.3);
+  border-color: #4ecca3;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.day-tile h3 {
+  color: #4ecca3;
+  margin: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.day-tile p {
+  color: #e8e8e8;
+  margin: 5px 0;
 }
 
-.card {
-  padding: 2em;
+/* Refresh button - dark theme */
+.refreshBtn {
+  padding: 12px 24px;
+  background-color: #4ecca3;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(78, 204, 163, 0.3);
+  transition: all 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.refreshBtn:hover {
+  background-color: #cc0202;
+  transform: scale(1.05);
+}
+
+/* Headers */
+h1 {
+  color: #4ecca3;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+h2 {
+  color: #4ecca3;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
